@@ -26,6 +26,7 @@ dg.index.name = 'Month'
 exclude = ['Date', 'BGT North of NE 70th Total']
 fields = [title for title in list(dg) if title not in exclude]
 # define z, which contains the values that we use "heat" to represent
+z = dg[dg["Ped South"], dg["Ped North"], dg["Bike South"], dg["Bike North"]
 z = []
 for idx, field in enumerate(fields):
     z.append(dg[field])

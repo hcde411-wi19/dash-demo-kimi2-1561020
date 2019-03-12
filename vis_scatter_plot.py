@@ -28,8 +28,8 @@ app.layout = html.Div(children=[
                 # This is how we define a scatter plot. Note that it also uses "go.Scatter",
                 # but with the mode to be only "markers"
                 go.Scatter(
-                    x=df['HP'],
-                    y=df['Weight'],
+                    x=df['Hwy MPG'],
+                    y=df['City MPG'],
                     mode='markers',
                     text=df['Vehicle Name'],  # This line sets the vehicle name as the points' labels.
                     marker={
@@ -42,8 +42,8 @@ app.layout = html.Div(children=[
                 'title': 'Car Dataset 2004',
                 # It is always a good practice to have axis labels.
                 # This is especially important in this case as the numbers are not trivial
-                'xaxis': {'title': 'Horse Power'},
-                'yaxis': {'title': 'Weight'},
+                'xaxis': {'title': 'Hwy MPG'},
+                'yaxis': {'title': 'City MPG'},
             }
         }
     )
